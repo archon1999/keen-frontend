@@ -7,24 +7,29 @@ import {Resources} from "@app/resources";
 import {ResourceByIdPipe} from "@shared/pipes/resource-by-id.pipe";
 import {ContentHeader} from "@layout/components/content-header/content-header.component";
 import {ContentHeaderModule} from "@layout/components/content-header/content-header.module";
+import {Observable} from "rxjs";
+import {PageResult} from "@app/common/classes/page-result";
+import {BaseTablePageComponent} from "@app/common/classes/base-table-page.component";
+import {Problem} from "@app/modules/problems/problems.interface";
+import {GroupComponent} from "@app/modules/home/dashboard/teacher/groups/group/group.component";
 
 @Component({
     selector: 'kep-problems',
-    standalone:true,
+    standalone: true,
     imports: [
         ProblemFilterComponent,
         ProblemCatalogComponent,
         KeenIconComponent,
         RouterLink,
         ResourceByIdPipe,
-        ContentHeaderModule
+        ContentHeaderModule,
+        GroupComponent
     ],
-    templateUrl:'./problems.component.html',
-    styleUrl:'./problems.component.scss'
+    templateUrl: './problems.component.html',
+    styleUrl: './problems.component.scss'
 })
 
-export class ProblemsComponent{
-
+export class ProblemsComponent extends BaseTablePageComponent<Problem>{
     protected getContentHeader(): ContentHeader {
         return {
             headerTitle: 'Masalalar',
@@ -40,5 +45,9 @@ export class ProblemsComponent{
         }
     }
 
-    protected readonly Resources = Resources;
+    getPage(): Observable<PageResult<Problem>> | null {
+        return this.api.get('problems')
+    }
+
+    public readonly Resources = Resources;
 }
