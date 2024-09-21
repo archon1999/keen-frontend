@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+@use "sass:meta";
+@import 'scss/core.scss';
+@import 'styles/vuexy-extended';

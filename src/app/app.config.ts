@@ -1,9 +1,35 @@
-import { ApplicationConfig } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { CoreConfig } from 'core/types';
 
-import { routes } from './app.routes';
-import { provideClientHydration } from '@angular/platform-browser';
+export const coreConfig: CoreConfig = {
+  app: {
+    appName: 'KEEN',
+    appTitle: 'KEEN.uz',
+    appLogoImage: 'assets/images/logo/logo.png',
+    appLanguage: 'en',
+  },
+  layout: {
+    skin: 'default',
+    type: 'vertical',
+    animation: 'none',
+    enableAnimation: true,
+    menu: {
+      hidden: false,
+      collapsed: false,
+    },
 
-export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration()]
+    navbar: {
+      hidden: false,
+      type: 'fixed-top',
+      background: 'navbar-light',
+    },
+    footer: {
+      hidden: false,
+      type: 'footer-static',
+      background: 'footer-light',
+    },
+    enableLocalStorage: true,
+    customizer: false,
+    scrollTop: false,
+    buyNow: false,
+  }
 };

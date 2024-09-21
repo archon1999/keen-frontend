@@ -1,116 +1,92 @@
-# KEEN.uz - Empowering Programmers, Advancing Education
+# Het Legal Cabinet
 
-## Overview
 
-**KEEN.uz** is an educational platform dedicated to fostering programming talent in Uzbekistan. Our mission is to provide students, young professionals, and coding enthusiasts with the resources and opportunities they need to develop their skills, compete in global programming competitions, and excel in the IT field. By offering a localized, accessible platform, KEEN.uz aims to bridge the gap in programming education, preparing users for both academic and professional success.
 
-## Features
+## Getting started
 
-- **Programming Contests**: Regularly hosted challenges to enhance competitive programming skills.
-- **Learning Materials**: Comprehensive tutorials, problem sets, and study plans for a wide range of programming topics.
-- **KEENCOIN System**: Earn and use the platform’s currency, KEENCOIN, to access additional resources like course material and problem solutions.
-- **Multilingual Support**: Available in Uzbek, Russian, and English to cater to diverse users.
-- **Mentorship**: Access guidance from experienced programmers and educators.
-- **Personalized Dashboard**: Track your progress, view contest history, and see your ranking among peers.
+To make it easy for you to get started with GitLab, here's a list of recommended next steps.
 
-## Getting Started
+Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
-## User Roles
+## Add your files
 
-KEP.uz provides functionality for 4 distinct user roles:
+- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
+- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
 
-1. **Super Admin**: 
-   - Complete control over the platform
-   - Management of users, competitions, and educational content
-   - Monitoring system analytics and platform performance
+```
+cd existing_repo
+git remote add origin https://u-gitlab.uzinfocom.uz/het-billing-system/het-legal-cabinet.git
+git branch -M main
+git push -uf origin main
+```
 
-2. **Teacher in Education System**:
-   - Creating and managing courses and educational materials
-   - Monitoring student progress
-   - Hosting online contests and guiding students through their learning journey
+## Integrate with your tools
 
-3. **Students**:
-   - Access to educational materials and programming challenges
-   - Participation in regular programming competitions and tournaments
-   - Opportunity to earn KEPCOIN, the platform's currency, by contributing to system development and excelling in competitions
+- [ ] [Set up project integrations](https://u-gitlab.uzinfocom.uz/het-billing-system/het-legal-cabinet/-/settings/integrations)
 
-4. **User**:
-   - Casual users can engage in educational activities
-   - Access online courses and study plans
-   - Participate in challenges and contests for fun or practice
- 
-### Prerequisites
+## Collaborate with your team
 
-To use **KEEN.uz**, all you need is:
-- A modern web browser (Chrome, Firefox, Edge, Safari)
-- A stable internet connection
-- A user account (sign up [here](https://keen.uz/signup))
+- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
+- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
+- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
+- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
+- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
-### Installation
+## Test and Deploy
 
-**KEEN.uz** is a web-based platform, so there's no need to install any software. Just follow the steps below to start using the platform:
-1. Visit [https://kep.uz](https://keen.uz).
-2. Sign up for a free account or log in if you're already registered.
-3. Explore the various resources, contests, and learning materials available to enhance your programming skills.
+Use the built-in continuous integration in GitLab.
 
-### Usage
+- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
+- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
+- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
+- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
+- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
 
-- **Join Contests**: Participate in weekly or monthly programming contests and compete with peers.
-- **Earn KEENCOIN**: Contribute to the platform’s development or win contests to earn KEENCOIN.
-- **Access Premium Content**: Use KEENCOIN to unlock advanced courses, problem solutions, and tailored study plans.
+***
 
-## Business Model
+# Editing this README
 
-KEEN.uz operates on a **usage-based monetization model**:
-- **Free Access**: Most content is free for all users, ensuring inclusivity and accessibility.
-- **KEENCOIN**: Users can earn KEENCOIN by participating in contests or contributing to the platform. KEENCOIN can be used to unlock premium content such as course material, in-depth tutorials, and problem solutions.
-- **Corporate Sponsorships**: IT companies can sponsor contests, providing them access to a pool of talented programmers.
+When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
 
-## Contribution
+## Suggestions for a good README
+Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
 
-Contributions are welcome! Here’s how you can help KEEN.uz grow:
-1. Report issues by submitting an issue in the [Issues](https://github.com/keep-uz/issues) tab.
-2. Contribute code via pull requests.
-3. Provide feedback and suggestions to improve the platform.
+## Name
+Choose a self-explaining name for your project.
 
-## Contact
+## Description
+Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
-For any inquiries, suggestions, or collaboration opportunities, please reach out to us via:
-- **Email**: support@keen.uz
-- **Telegram**: [t.me/keenuzsupport](https://t.me/keenuzsupport)
+## Badges
+On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+
+## Visuals
+Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+
+## Installation
+Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+
+## Usage
+Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+
+## Support
+Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+
+## Roadmap
+If you have ideas for releases in the future, it is a good idea to list them in the README.
+
+## Contributing
+State if you are open to contributions and what your requirements are for accepting them.
+
+For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+
+You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+
+## Authors and acknowledgment
+Show your appreciation to those who have contributed to the project.
 
 ## License
+For open source projects, say how it is licensed.
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
----
-
-Thank you for being part of KEEN.uz! Together, we can build a brighter future for Uzbekistan's IT sector.
-
-# Keen
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.9.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Project status
+If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
