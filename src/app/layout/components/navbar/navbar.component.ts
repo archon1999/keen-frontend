@@ -128,7 +128,7 @@ export class NavbarComponent extends BaseComponent implements OnInit, OnDestroy 
 
   logout() {
     this._authenticationService.logout();
-    this._router.navigateByUrl(this._router.url);
+    this._router.navigateByUrl('/login');
   }
 
   // Lifecycle Hooks
