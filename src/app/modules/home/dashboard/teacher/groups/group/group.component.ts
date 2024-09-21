@@ -29,7 +29,7 @@ export class GroupComponent {
   showStudent(student: Student) {
     this.modalService.open({
       component: StudentCardComponent,
-      componentOptions: { student },
+      componentOptions: { student, group: this.group },
       modalOptions: { size: 'lg'},
       title : 'Student Details'
     });
