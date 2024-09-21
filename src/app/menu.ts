@@ -10,4 +10,12 @@ export const menu: CoreMenu[] = [
     url: Resources.Home,
     exactMatch: true,
   },
+  {
+    id: 'problems',
+    translate: 'Menu.Problems',
+    type: 'item',
+    icon: 'file',
+    url: Resources.Problems,
+    exactMatch: true,
+  },
 ];

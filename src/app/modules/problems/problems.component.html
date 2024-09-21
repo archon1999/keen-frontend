@@ -1,0 +1,22 @@
+<div class="row row gap-4">
+    <div class="col-8">
+        <kep-problem-filter/>
+        <div class="pt-2">
+            <a [routerLink]="[Resources.ProblemById | resourceById :1]">
+            <div class="card cursor-pointer">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="card-text d-flex">
+                        <p class="text-success">Лёгкая</p>
+                        <p class="px-1"> - </p>
+                        <p>Бекенд</p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-4">
+        <kep-problem-catalog/>
+    </div>
+</div>

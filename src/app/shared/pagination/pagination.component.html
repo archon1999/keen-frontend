@@ -44,7 +44,7 @@
       [clearable]="false"
       [searchable]="false"
       [(ngModel)]="pageSize"
-      (change)="sizeChange($event)">
+     o (change)="sizeChange($event)">
       @for (pageOption of pageOptions; track pageOption){
         <ng-option [value]="pageOption">
           {{ pageOption }} / {{ 'Page' | translate }}
