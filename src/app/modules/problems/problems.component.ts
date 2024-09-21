@@ -12,6 +12,7 @@ import {PageResult} from "@app/common/classes/page-result";
 import {BaseTablePageComponent} from "@app/common/classes/base-table-page.component";
 import {Problem} from "@app/modules/problems/problems.interface";
 import {GroupComponent} from "@app/modules/home/dashboard/teacher/groups/group/group.component";
+import { PaginationComponent } from "@shared/pagination/pagination.component";
 
 @Component({
     selector: 'kep-problems',
@@ -23,7 +24,8 @@ import {GroupComponent} from "@app/modules/home/dashboard/teacher/groups/group/g
         RouterLink,
         ResourceByIdPipe,
         ContentHeaderModule,
-        GroupComponent
+        GroupComponent,
+        PaginationComponent
     ],
     templateUrl: './problems.component.html',
     styleUrl: './problems.component.scss'

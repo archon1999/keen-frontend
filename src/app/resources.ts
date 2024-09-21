@@ -2,7 +2,7 @@ export enum Resources {
   Home = '/',
 
   Problems = 'problems',
-  ProblemById = 'problem/:id',
+  ProblemById = `problems/problem/:id`,
 
   Contests = 'contests',
 }

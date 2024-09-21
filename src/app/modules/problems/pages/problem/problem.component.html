@@ -1,0 +1,34 @@
+<app-content-header [contentHeader]="getContentHeader()"></app-content-header>
+<div class="row">
+  <div class="card px-2 col-6">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <div
+          class="nav-link cursor-pointer"
+          [ngClass]="{'active': activeTab === 'problem'}"
+          (click)="selectTab('problem')">
+          Masala
+        </div>
+      </li>
+      <li class="nav-item">
+        <div
+          class="nav-link cursor-pointer"
+          [ngClass]="{'active': activeTab === 'attempts'}"
+          (click)="selectTab('attempts')">
+          Urinish
+        </div>
+      </li>
+    </ul>
+    <div class="tab-content mt-3">
+      @if (activeTab === 'problem'){
+       <problem-card/>
+      } @else if (activeTab === 'attempts') {
+        <h3>Urinish</h3>
+      }
+    </div>
+
+  </div>
+<div class="card col-6">
+
+</div>
+</div>
