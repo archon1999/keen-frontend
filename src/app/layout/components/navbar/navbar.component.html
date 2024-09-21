@@ -60,10 +60,10 @@
     </li>
 
     <li *ngIf="!isAuthenticated">
-      <div (click)="loginModalOpenForm()" class="cursor-pointer btn" rippleEffect>
+      <a routerLink="login" class="cursor-pointer btn" rippleEffect>
         <i data-feather="log-in"></i>
         {{ 'Login' | translate }}
-      </div>
+      </a>
     </li>
 
     <!-- User Dropdown -->
