@@ -3,6 +3,7 @@ export const locale = {
   data: {
     Menu: {
       Home: 'Bosh sahifa',
+      Problems: 'Masalalar',
     },
     Login: 'Kirish',
     Logout: 'Chiqish',
