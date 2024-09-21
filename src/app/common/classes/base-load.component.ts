@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { BaseComponent } from '@shared/components/classes/base.component';
+
 import { Observable } from 'rxjs';
+import { BaseComponent } from "@app/common/classes/base.component";
 
 @Component({
   template: '',
@@ -8,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class BaseLoadComponent<T> extends BaseComponent implements OnInit {
   public data: T;
-  public isLoading = false;
+  public isLoading = true;
   public loadOnInit = true;
 
   ngOnInit() {

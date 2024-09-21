@@ -2,42 +2,7 @@
 <div class="content-wrapper container-xxl p-0">
   <div class="content-body">
     <app-content-header [contentHeader]="getContentHeader()"></app-content-header>
-
-    <div class="row">
-      <div class="col-lg-6 col-12">
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">Home</div>
-          </div>
-
-          <div [@fadeInRightOnEnter] class="card-body">
-            Welcome to
-            <keen-icon name="profile" type="duotone" color="primary"></keen-icon>
-
-            <p-calendar></p-calendar>
-            <p-inputNumber></p-inputNumber>
-            <p-button label="Submit"></p-button>
-            <button class="btn btn-primary">Submit</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-6 col-12">
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">Home</div>
-          </div>
-
-          <div [@fadeInRightOnEnter] class="card-body">
-            Welcome to KEEN
-            <keen-icon name="username"></keen-icon>
-
-            <span class="badge badge-primary badge-glow">KEEN</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <app-teacher></app-teacher>
   </div>
 </div>
 
