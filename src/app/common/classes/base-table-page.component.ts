@@ -1,15 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { PageResult } from '@shared/components/classes/page-result';
-import { BasePageComponent } from '@shared/components/classes/base-page.component';
-import { NavigationStart } from '@angular/router';
-import { BASE_URL } from '@shared/services/api.service';
+import { BasePageComponent } from "@app/common/classes/base-page.component";
+import { PageResult } from "@app/common/classes/page-result";
 
 @Component({
   template: '',
   standalone: true
 })
-export class BaseTablePageComponent<T> extends BasePageComponent {
+export class BaseTablePageComponent<T> extends BasePageComponent implements OnInit {
   public pageNumber: number;
   public pageSize: number;
   public total: number;
@@ -31,16 +29,10 @@ export class BaseTablePageComponent<T> extends BasePageComponent {
   constructor() {
     super();
     setTimeout(() => this.updatePageParams());
-    this.router.events.subscribe(
-      (event) => {
-        if (event instanceof NavigationStart && event.navigationTrigger === 'popstate') {
-          setTimeout(() => this.updatePageParams());
-          if (new URL(event.url, BASE_URL).pathname === new URL(this.getLastUrl(), BASE_URL).pathname) {
-            setTimeout(() => this.reloadPage());
-          }
-        }
-      }
-    );
+  }
+
+  ngOnInit() {
+    this.reloadPage();
   }
 
   updatePageParams() {

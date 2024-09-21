@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { BaseComponent } from '@shared/components/classes/base.component';
 import { ContentHeader } from '@layout/components/content-header/content-header.component';
+import { BaseComponent } from "@app/common/classes/base.component";
 
 @Component({
   template: '',

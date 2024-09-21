@@ -7,6 +7,7 @@ import { ContentHeaderModule } from "@layout/components/content-header/content-h
 import { ButtonModule } from "primeng/button";
 import { InputNumberModule } from "primeng/inputnumber";
 import { CalendarModule } from "primeng/calendar";
+import { TeacherComponent } from "@app/modules/home/dashboard/teacher/teacher.component";
 
 @Component({
   selector: 'app-home',
@@ -20,6 +21,7 @@ import { CalendarModule } from "primeng/calendar";
     ButtonModule,
     InputNumberModule,
     CalendarModule,
+    TeacherComponent,
   ],
   animations: [
     fadeInRightOnEnterAnimation(),
