@@ -14,7 +14,7 @@ export const menu: CoreMenu[] = [
     id: 'problems',
     translate: 'Menu.Problems',
     type: 'item',
-    icon: 'file',
+    icon: 'message-programming',
     url: Resources.Problems,
     exactMatch: true,
   },

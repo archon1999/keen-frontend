@@ -32,8 +32,8 @@ export class ProblemsComponent{
                 links: [
                     {
                         isLink: true,
-                        name: '',
-                        link: '/link'
+                        name: 'KEEN.uz',
+                        link: ''
                     }
                 ]
             }

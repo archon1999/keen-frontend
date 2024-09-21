@@ -1,23 +1,27 @@
-<app-content-header [contentHeader]="getContentHeader()"></app-content-header>
-<div class="row row gap-4">
-    <div class="col-8">
+<div class="content-wrapper container-xxl p-0">
+  <div class="content-body">
+    <app-content-header [contentHeader]="getContentHeader()"></app-content-header>
+    <div class="row row gap-4">
+      <div class="col-8">
         <kep-problem-filter/>
         <div class="pt-2">
-            <a [routerLink]="[Resources.ProblemById | resourceById :1]">
+          <a [routerLink]="[Resources.ProblemById | resourceById :1]">
             <div class="card cursor-pointer">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <div class="card-text d-flex">
-                        <p class="text-success">Лёгкая</p>
-                        <p class="px-1"> - </p>
-                        <p>Бекенд</p>
-                    </div>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <div class="card-text d-flex">
+                  <p class="text-success">Лёгкая</p>
+                  <p class="px-1"> - </p>
+                  <p>Бекенд</p>
                 </div>
+              </div>
             </div>
-            </a>
+          </a>
         </div>
-    </div>
-    <div class="col-4">
+      </div>
+      <div class="col-4">
         <kep-problem-catalog/>
+      </div>
     </div>
+  </div>
 </div>
