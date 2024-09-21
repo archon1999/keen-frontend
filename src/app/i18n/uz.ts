@@ -33,6 +33,7 @@ export const locale = {
       CONTEST_FINISHED: 'Kontest yakunlandi',
       CONTEST_STARTED: 'Kontest boshlandi',
       CATEGORY: 'Toifa',
+      POINTS: 'Natija',
     },
   }
 };

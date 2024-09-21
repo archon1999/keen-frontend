@@ -16,7 +16,7 @@ export const menu: CoreMenu[] = [
     type: 'item',
     icon: 'message-programming',
     url: Resources.Problems,
-    exactMatch: true,
+    exactMatch: false,
   },
   {
     id: 'contests',
@@ -24,6 +24,6 @@ export const menu: CoreMenu[] = [
     type: 'item',
     icon: 'cup',
     url: Resources.Contests,
-    exactMatch: true,
+    exactMatch: false,
   },
 ];
