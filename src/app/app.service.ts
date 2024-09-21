@@ -32,10 +32,7 @@ export class AppService {
       this.animationsDisabled = !config.layout.enableAnimation;
       this.coreConfig = config;
 
-      let appLanguage = this.coreConfig.app.appLanguage || this.translateService.getBrowserLang();
-      if (!this.translateService.langs.includes(appLanguage)) {
-        appLanguage = 'en';
-      }
+      let appLanguage = this.coreConfig.app.appLanguage;
       this.translateService.use(appLanguage);
 
       setTimeout(() => {

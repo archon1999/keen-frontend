@@ -73,8 +73,8 @@ export class AuthLoginV2Component implements OnInit {
     this.authService.login(this.f.username.value, this.f.password.value).subscribe(
       (user: any) => {
         this.loading = false;
-        this._router.navigate(['/home']);
-        const message = `👋 ${ this.translateService.instant('Welcome') }, ` + user.firstName || user.username + '!';
+        this._router.navigate(['/']);
+        const message = `👋 ${ this.translateService.instant('WelcomePage') }, ` + user.firstName || user.username + '!';
         this.toastr.success(this.translateService.instant('LoginSuccessText'), message, {
           toastClass: 'toast ngx-toastr',
           closeButton: true

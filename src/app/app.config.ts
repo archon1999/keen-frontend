@@ -5,7 +5,7 @@ export const coreConfig: CoreConfig = {
     appName: 'KEEN',
     appTitle: 'KEEN.uz',
     appLogoImage: 'assets/images/logo/logo.png',
-    appLanguage: 'en',
+    appLanguage: 'uz',
   },
   layout: {
     skin: 'default',
@@ -14,9 +14,8 @@ export const coreConfig: CoreConfig = {
     enableAnimation: true,
     menu: {
       hidden: false,
-      collapsed: false,
+      collapsed: true,
     },
-
     navbar: {
       hidden: false,
       type: 'fixed-top',

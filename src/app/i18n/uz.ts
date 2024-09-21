@@ -9,5 +9,8 @@ export const locale = {
     PageTitle: {
       Home: 'Bosh sahifa',
     },
+    LoginText: 'Iltimos avtorizatsiyadan oʻting va sayohatni davom ettiring',
+    WelcomePage: 'Xush kelibsiz',
+    LoginSuccessText: 'Tizimga muvaffaqiyatli kirdingiz',
   }
 };
