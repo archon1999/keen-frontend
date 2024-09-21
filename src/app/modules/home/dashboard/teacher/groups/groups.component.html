@@ -1,15 +1,10 @@
-<ngb-accordion [destroyOnHide]="false" [closeOthers]="true">
+<div class="row">
   @for (group of pageResult?.data; track group) {
-    <ngb-panel id="group{{ group.id }}" [cardClass]="'collapse-margin'">
-      <ng-template ngbPanelTitle>
-        <span>{{ group.name }}</span>
-      </ng-template>
-      <ng-template ngbPanelContent>
-        {{ group.students }}
-      </ng-template>
-    </ngb-panel>
+    <div class="col-md-6">
+      <app-group [group]="group"/>
+    </div>
   }
-</ngb-accordion>
+</div>
 
 <pagination
   (pageChange)="pageChange($event)"

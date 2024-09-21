@@ -6,11 +6,12 @@ import { Observable } from "rxjs";
 import { PageResult } from "@app/common/classes/page-result";
 import { PaginationComponent } from "@shared/pagination/pagination.component";
 import { NgbAccordionModule } from "@ng-bootstrap/ng-bootstrap";
+import { GroupComponent } from "@app/modules/home/dashboard/teacher/groups/group/group.component";
 
 @Component({
   selector: 'app-groups',
   standalone: true,
-  imports: [CommonModule, PaginationComponent, NgbAccordionModule],
+  imports: [CommonModule, PaginationComponent, NgbAccordionModule, GroupComponent],
   templateUrl: './groups.component.html',
   styleUrl: './groups.component.scss'
 })
