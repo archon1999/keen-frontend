@@ -1,6 +1,5 @@
 import {Component, OnInit} from "@angular/core";
 import {ChipsModule} from "primeng/chips";
-import {Button} from "primeng/button";
 import {DropdownModule} from "primeng/dropdown";
 import {NgSelectModule} from "@shared/third-part-modules/ng-select/ng-select.module";
 import {KeenIconComponent} from "@shared/keen-icon/keen-icon.component";
@@ -16,7 +15,6 @@ interface SelectItem {
     standalone: true,
     imports: [
         ChipsModule,
-        Button,
         DropdownModule,
         NgSelectModule,
         KeenIconComponent,

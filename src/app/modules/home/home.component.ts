@@ -30,13 +30,13 @@ import { TeacherComponent } from "@app/modules/home/dashboard/teacher/teacher.co
 export class HomeComponent {
   protected getContentHeader(): ContentHeader {
     return {
-      headerTitle: 'Home',
+      headerTitle: 'Menu.Home',
       breadcrumb: {
         links: [
           {
             isLink: true,
-            name: 'Link',
-            link: '/link'
+            name: 'KEEN.uz',
+            link: ''
           }
         ]
       }

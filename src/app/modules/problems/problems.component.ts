@@ -37,8 +37,8 @@ export class ProblemsComponent extends BaseTablePageComponent<Problem>{
                 links: [
                     {
                         isLink: true,
-                        name: '',
-                        link: '/link'
+                        name: 'KEEN.uz',
+                        link: ''
                     }
                 ]
             }
