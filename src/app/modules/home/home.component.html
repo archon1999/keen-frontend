@@ -2,6 +2,24 @@
 <div class="content-wrapper container-xxl p-0">
   <div class="content-body">
     <app-content-header [contentHeader]="getContentHeader()"></app-content-header>
+    <h1 class="text-dark text-center">Xush kelibsiz, {{ currentUser.firstName }}</h1>
+    <h3 class="text-center my-2">
+      Siz
+      <b>
+        @switch (authService.currentUserRole) {
+          @case (Role.Teacher) {
+            O'qituvchi
+          }
+          @case (Role.User) {
+            Foydalanuvchi
+          }
+          @case (Role.Student) {
+            O'quvchi
+          }
+        }
+      </b>
+      bo'lib kirdingiz
+    </h3>
     @switch (authService.currentUserRole) {
       @case (Role.Teacher) {
         <app-teacher></app-teacher>
@@ -13,7 +31,6 @@
         <app-student></app-student>
       }
     }
-    <app-student></app-student>
   </div>
 </div>
 

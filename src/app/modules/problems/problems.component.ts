@@ -13,6 +13,7 @@ import {BaseTablePageComponent} from "@app/common/classes/base-table-page.compon
 import {Problem} from "@app/modules/problems/problems.interface";
 import {GroupComponent} from "@app/modules/home/dashboard/teacher/groups/group/group.component";
 import { PaginationComponent } from "@shared/pagination/pagination.component";
+import { SpinnerComponent } from "@app/common/classes/spinner/spinner.component";
 
 @Component({
     selector: 'kep-problems',
@@ -25,7 +26,9 @@ import { PaginationComponent } from "@shared/pagination/pagination.component";
         ResourceByIdPipe,
         ContentHeaderModule,
         GroupComponent,
-        PaginationComponent
+        PaginationComponent,
+        GroupComponent,
+        SpinnerComponent
     ],
     templateUrl: './problems.component.html',
     styleUrl: './problems.component.scss'
