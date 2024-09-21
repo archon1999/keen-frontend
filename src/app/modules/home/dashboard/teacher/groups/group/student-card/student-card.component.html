@@ -28,7 +28,7 @@
 
     >
       <ng-template pTemplate="date" let-date>
-        <span class="py-25 px-1" style="border-radius: 10rem" [class]="getBgColor(date)">
+        <span class="py-25 px-1" style="border-radius: 10rem" [class]="getBgColor(date)" container="body" [ngbTooltip]="getTooltip(date)">
             {{date.day}}
         </span>
       </ng-template>

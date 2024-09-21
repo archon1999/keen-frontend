@@ -8,11 +8,12 @@ import { Group } from "@app/modules/home/dashboard/teacher/groups/group.interfac
 import { SpinnerModule } from "primeng/spinner";
 import { SpinnerComponent } from "@app/common/classes/spinner/spinner.component";
 import { CalendarModule } from "primeng/calendar";
+import { NgbTooltipModule } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-student-card',
   standalone: true,
-  imports: [CommonModule, SpinnerModule, SpinnerComponent, CalendarModule],
+  imports: [CommonModule, SpinnerModule, SpinnerComponent, CalendarModule, NgbTooltipModule],
   templateUrl: './student-card.component.html',
   styleUrl: './student-card.component.scss'
 })
@@ -25,10 +26,13 @@ export class StudentCardComponent extends BaseLoadComponent<StudentResult>{
   getData(): Observable<StudentResult> | null {
     return this.api.get(`groups/${this.group.id}/students/${this.student.id}/results`);
   }
-  getBgColor({ year, month, day }) {
+  getResults({ year, month, day }) {
     month ++;
     const date = `${year}-${month < 10 ? '0': ''}${month}-${day < 10 ? '0': ''}${day}`;
-    const result = this.data.results.find(result => result.date === date);
+    return this.data.results.find(result => result.date === date);
+  }
+  getBgColor(date) {
+    const result = this.getResults(date);
     if (!result) return '';
     switch (result.status) {
       case 1:
@@ -42,5 +46,10 @@ export class StudentCardComponent extends BaseLoadComponent<StudentResult>{
       case 5:
         return 'bg-secondary text-white';
     }
+  }
+  getTooltip(date): string {
+    const result = this.getResults(date);
+    if (!result) return '';
+    return "Status-" + String(result.status);
   }
 }
