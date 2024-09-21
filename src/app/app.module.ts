@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { APP_INITIALIZER, Injectable, NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,6 +31,8 @@ import { register } from 'swiper/element/bundle';
 import { LayoutComponent } from '@layout/layout.component';
 import { appRoutes } from "@app/app.routing";
 import { AuthService } from "@app/modules/pages/authentication/auth.service";
+import { of } from "rxjs";
+import { ErrorInterceptor } from "@app/modules/pages/authentication/error.interceptor";
 
 register();
 
@@ -55,11 +57,16 @@ export class CustomTitleStrategy extends TitleStrategy {
 }
 
 export function authFactory(authService: AuthService) {
-  return () => authService.getMe().pipe(
-    map(user => {
-      return true;
-    })
-  );
+  return () => {
+    if (localStorage.getItem('token')) {
+      return authService.getMe().pipe(
+        map(user => {
+          return true;
+        })
+      )
+    }
+    return of(null);
+  }
 }
 
 @NgModule({
@@ -103,6 +110,11 @@ export function authFactory(authService: AuthService) {
       useFactory: authFactory,
       deps: [AuthService],
       multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
+      multi: true,
     },
     CustomBreakPointsProvider
   ],

@@ -1,17 +1,18 @@
 import { inject, Injectable } from '@angular/core';
-import { BehaviorSubject, of, tap } from 'rxjs';
+import { BehaviorSubject, of, switchMap, tap } from 'rxjs';
 import { User } from '@app/modules/pages/authentication/user';
 import { ApiService } from '@shared/services/api.service';
 import { HttpClient } from "@angular/common/http";
 import { environment } from "../../../../environments/environment";
 import { catchError } from "rxjs/operators";
+import { LocalStorageService } from "@shared/services/storages/local-storage.service";
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   protected _http = inject(HttpClient);
   private currentUserSubject = new BehaviorSubject<User>(null);
   public currentUser = this.currentUserSubject.asObservable();
-
+  private localStorageService = inject(LocalStorageService);
   constructor(private api: ApiService) {}
 
   public get currentUserValue(): User {
@@ -32,15 +33,17 @@ export class AuthService {
   }
 
   login(username: string, password: string) {
-    const token = btoa(`${username}:${password}`);
-    const headers = { 'Authorization': `Basic ${token}` };
     return this._http
-      .post<any>(`${environment.apiUrl}/api/login/`, {}, { headers: headers })
-      .pipe(tap(user => this.currentUserSubject.next(user)));
+      .post<any>(`${environment.apiUrl}/api-token-auth/`, { username, password })
+      .pipe(
+        tap(({ token }) => this.localStorageService.set('token', token)),
+        switchMap(() => this.getMe())
+      );
   }
 
   logout() {
-    return of(null);
+    this.localStorageService.clear();
+    this.currentUserSubject.next(null);
   }
 
 }
