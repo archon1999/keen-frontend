@@ -18,4 +18,12 @@ export const menu: CoreMenu[] = [
     url: Resources.Problems,
     exactMatch: true,
   },
+  {
+    id: 'contests',
+    translate: 'Menu.Contests',
+    type: 'item',
+    icon: 'cup',
+    url: Resources.Contests,
+    exactMatch: true,
+  },
 ];

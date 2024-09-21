@@ -3,6 +3,8 @@ export enum Resources {
 
   Problems = 'problems',
   ProblemById = `${Problems}/:id`,
+
+  Contests = 'contests',
 }
 
 export function getResourceById(resource: Resources, id: number | string) {
