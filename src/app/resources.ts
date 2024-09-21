@@ -2,7 +2,7 @@ export enum Resources {
   Home = '/',
 
   Problems = 'problems',
-  ProblemById = `${Problems}/:id`,
+  ProblemById = 'problem/:id',
 }
 
 export function getResourceById(resource: Resources, id: number | string) {

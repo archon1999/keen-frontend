@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { KeenIconComponent } from "@shared/keen-icon/keen-icon.component";
 import { fadeInRightOnEnterAnimation } from "angular-animations";
@@ -8,6 +8,9 @@ import { ButtonModule } from "primeng/button";
 import { InputNumberModule } from "primeng/inputnumber";
 import { CalendarModule } from "primeng/calendar";
 import { TeacherComponent } from "@app/modules/home/dashboard/teacher/teacher.component";
+import { AuthService } from "@app/modules/pages/authentication/auth.service";
+import { StudentComponent } from "@app/modules/home/dashboard/student/student.component";
+import { Role } from "@app/modules/pages/authentication/role.enum";
 
 @Component({
   selector: 'app-home',
@@ -22,12 +25,15 @@ import { TeacherComponent } from "@app/modules/home/dashboard/teacher/teacher.co
     InputNumberModule,
     CalendarModule,
     TeacherComponent,
+    StudentComponent,
   ],
   animations: [
     fadeInRightOnEnterAnimation(),
   ]
 })
 export class HomeComponent {
+  authService = inject(AuthService);
+
   protected getContentHeader(): ContentHeader {
     return {
       headerTitle: 'Menu.Home',
@@ -42,4 +48,6 @@ export class HomeComponent {
       }
     }
   }
+
+  protected readonly Role = Role;
 }

@@ -2,7 +2,18 @@
 <div class="content-wrapper container-xxl p-0">
   <div class="content-body">
     <app-content-header [contentHeader]="getContentHeader()"></app-content-header>
-    <app-teacher></app-teacher>
+    @switch (authService.currentUserRole) {
+      @case (Role.Teacher) {
+        <app-teacher></app-teacher>
+      }
+      @case (Role.User) {
+
+      }
+      @case (Role.Student) {
+        <app-student></app-student>
+      }
+    }
+    <app-student></app-student>
   </div>
 </div>
 

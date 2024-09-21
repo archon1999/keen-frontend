@@ -4,4 +4,6 @@ export interface Student {
   firstName: string;
   lastName: string;
   result: number;
+  birthday?: string;
+  gender?: string;
 }

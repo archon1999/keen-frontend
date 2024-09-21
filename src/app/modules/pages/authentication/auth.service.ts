@@ -18,7 +18,9 @@ export class AuthService {
   public get currentUserValue(): User {
     return this.currentUserSubject.value;
   }
-
+  public get currentUserRole() {
+    return this.currentUserValue?.role;
+  }
   getMe() {
     return this.api.get('me').pipe(
       tap((user: User) => {

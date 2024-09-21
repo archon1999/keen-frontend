@@ -6,7 +6,6 @@ import {
 } from "@app/modules/home/dashboard/teacher/groups/group/add-student/add-student.component";
 import { KeenIconComponent } from "@shared/keen-icon/keen-icon.component";
 import { Student } from "@app/modules/home/dashboard/teacher/groups/student.interface";
-import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import {
   StudentCardComponent
 } from "@app/modules/home/dashboard/teacher/groups/group/student-card/student-card.component";
