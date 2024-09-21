@@ -50,6 +50,6 @@ export class StudentCardComponent extends BaseLoadComponent<StudentResult>{
   getTooltip(date): string {
     const result = this.getResults(date);
     if (!result) return '';
-    return "Status-" + String(result.status);
+    return this.translateService.instant("Status" + String(result.status));
   }
 }

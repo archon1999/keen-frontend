@@ -15,6 +15,11 @@ export const locale = {
     WelcomePage: 'Xush kelibsiz',
     LoginSuccessText: 'Tizimga muvaffaqiyatli kirdingiz',
     SolvedProblems: 'Ishlangan masalalar',
+    Status1: 'Ishlagan',
+    Status2: 'Ishlolmagan',
+    Status3: 'Urinish qilmagan',
+    Status4: 'Tizimga kirmagan',
+    Status5: 'Topshiriq berilmagan',
     CONTESTS: {
       STANDINGS: 'Natijalar',
       CONTESTANT: 'Ishtirokchi',

@@ -8,11 +8,12 @@ import { PaginationComponent } from "@shared/pagination/pagination.component";
 import { NgbAccordionModule } from "@ng-bootstrap/ng-bootstrap";
 import { GroupComponent } from "@app/modules/home/dashboard/teacher/groups/group/group.component";
 import { map } from "rxjs/operators";
+import { SpinnerComponent } from "@app/common/classes/spinner/spinner.component";
 
 @Component({
   selector: 'app-groups',
   standalone: true,
-  imports: [CommonModule, PaginationComponent, NgbAccordionModule, GroupComponent],
+  imports: [CommonModule, PaginationComponent, NgbAccordionModule, GroupComponent, SpinnerComponent],
   templateUrl: './groups.component.html',
   styleUrl: './groups.component.scss'
 })
