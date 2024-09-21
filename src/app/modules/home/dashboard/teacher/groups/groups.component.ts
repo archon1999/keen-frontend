@@ -7,6 +7,7 @@ import { PageResult } from "@app/common/classes/page-result";
 import { PaginationComponent } from "@shared/pagination/pagination.component";
 import { NgbAccordionModule } from "@ng-bootstrap/ng-bootstrap";
 import { GroupComponent } from "@app/modules/home/dashboard/teacher/groups/group/group.component";
+import { map } from "rxjs/operators";
 
 @Component({
   selector: 'app-groups',
@@ -17,6 +18,16 @@ import { GroupComponent } from "@app/modules/home/dashboard/teacher/groups/group
 })
 export class GroupsComponent extends BaseTablePageComponent<Group>{
   getPage(): Observable<PageResult<Group>> | null {
-    return this.api.get('groups')
+    return this.api.get('groups').pipe(
+      map((pageResult: PageResult) => {
+        pageResult.data.forEach(
+          (obj) => {
+            obj.students = obj.students.sort((a, b) => b.result - a.result)
+            return obj;
+          }
+        );
+        return pageResult;
+      })
+    )
   }
 }

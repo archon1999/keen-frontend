@@ -11,6 +11,7 @@ import { TeacherComponent } from "@app/modules/home/dashboard/teacher/teacher.co
 import { AuthService } from "@app/modules/pages/authentication/auth.service";
 import { StudentComponent } from "@app/modules/home/dashboard/student/student.component";
 import { Role } from "@app/modules/pages/authentication/role.enum";
+import { BaseComponent } from "@app/common/classes/base.component";
 
 @Component({
   selector: 'app-home',
@@ -31,9 +32,7 @@ import { Role } from "@app/modules/pages/authentication/role.enum";
     fadeInRightOnEnterAnimation(),
   ]
 })
-export class HomeComponent {
-  authService = inject(AuthService);
-
+export class HomeComponent extends BaseComponent {
   protected getContentHeader(): ContentHeader {
     return {
       headerTitle: 'Menu.Home',
