@@ -29,7 +29,7 @@ export class CoreConfigService {
     } else {
       localStorage.removeItem('config');
     }
-    _config.app.appLanguage = this.translateService.getBrowserLang();
+    _config.app.appLanguage = 'uz';
     this._defaultConfig = this.localConfig ? this.localConfig : _config;
     this._initConfig();
   }
