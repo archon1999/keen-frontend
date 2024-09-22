@@ -1,3 +1,4 @@
+import { AuthGuard } from '../pages/authentication/auth.guards';
 import { HomeComponent } from './home.component';
 import { Route } from '@angular/router';
 
@@ -6,6 +7,6 @@ export default [
     path: '',
     component: HomeComponent,
     title: 'Home',
-    // canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
   },
 ] satisfies Route[];
