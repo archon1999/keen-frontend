@@ -76,8 +76,8 @@ This platform helps educational systems move toward a digital, competitive, and 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-repo/kepuz-platform.git
-   cd kepuz-platform
+   git clone https://github.com/your-repo/keenuz-platform.git
+   cd keenuz-platform
    ```
 
 2. **Install dependencies:**
@@ -191,7 +191,7 @@ KEENCOIN is used to encourage students to complete tasks and participate in comp
 Educational institutions (schools and universities) subscribe to the platform and provide access to teachers and students.
 
 ### Can users without subscriptions access the platform?
-Yes, users can browse basic features, but subscription is required for full access to task management and competition modules.
+Yes, users and students can browse without subscription, but subscription is required for full access to task management and competition modules.
 
 ---
 
